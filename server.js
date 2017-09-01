@@ -6,6 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 app.get('/', function (req, res) {
+  
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
@@ -18,7 +19,7 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 app.get('/artist-1',function(req,res){
-    res.send("This Request will be served");
+    res.sendFile(path.join(__dirname, 'ui', 'artist-1.html'));
 });
 
 app.get('/artist-2',function(req,res){
