@@ -17,7 +17,15 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
-app.get('artist',function(req,res){
+app.get('artist-1',function(req,res){
+    res.send("This Request will be served");
+});
+
+app.get('artist-2',function(req,res){
+    res.send("This Request will be served");
+});
+
+app.get('artist-3',function(req,res){
     res.send("This Request will be served");
 });
 // Do not change port, otherwise your app won't run on IMAD servers
