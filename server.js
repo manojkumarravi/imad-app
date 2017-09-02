@@ -64,7 +64,7 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 app.get('/artist-1',function(req,res){
-    res.sendFile(path.join(__dirname, 'ui', 'artist-1.html'));
+    res.send(createtemplate(content));
 });
 
 app.get('/artist-2',function(req,res){
