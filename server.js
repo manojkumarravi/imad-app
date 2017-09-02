@@ -4,7 +4,52 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
+var content={
+     title:"artist-1 welcome",
+     date:"sep 2,2017",
+     content:`<p>
+            HI ARTIST-1 WE ARE PROUD TO HAVE U HERE
+        </p>`
+        
+};
+function createtemplate(data)
+{
+    var title=data.title;
+    var date=data.date;
+    var content=data.content;
+    
+var htmltemplate=`<html>
+    <head>
+        <title>
+          ${title};  
+        </title>
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <style>
+            .container
+            {
+                max-width:800px;
+                margin:0 auto;
+                color:grey;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+        <div>
+            <a href='/'>home</a>
+        </div>
+        <hr/>
+        <div>
+            ${date};
+        </div>
+         ${content};
+        </div>
+    </body>
+</html>`;
+return htmltemplate;
 
+}
 app.get('/', function (req, res) {
   
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
