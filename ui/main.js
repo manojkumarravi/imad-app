@@ -15,4 +15,5 @@ button.onclick=function()
           }
       };
      req.open('GET','https://imad.hasura.io/counter',true);
+     req.send(null);
   };
