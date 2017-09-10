@@ -13,6 +13,6 @@ button.onclick=function()
               }
           }
       };
-     req.open('GET','http://thekingmanoj123.imad.hasura-app.io/count',true);
+     req.open('GET','http://thekingmanoj123.imad.hasura-app.io',true);
      req.send(null);
   };
