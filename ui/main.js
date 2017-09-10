@@ -9,10 +9,10 @@ button.onclick=function()
               {
                   var count=request.responseText;
                   var span=document.getElementById("count");
-                   span.innerHTML=(count+1).toString();
+                   span.innerHTML=count.toString();
               }
           }
       };
-     req.open('GET','https://imad.hasura.io/counter',true);
+     req.open('GET','http://thekingmanoj123.imad.hasura-app.io/counter',true);
      req.send(null);
   };
